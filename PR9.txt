@@ -1,0 +1,151 @@
+
+				-------------------PRACTICAL 9 -----------------
+
+Q1) Write a program to define a user defined package Mypack in which you will write a class Balance. The Balance will have data members as String Name, Double Balance. Write a constructor to initialize the member. Write a function to display Name and Balance. Now import this package in your class. 
+
+Package Create:
+
+package packages;
+public class balance
+{
+String name;
+double balance;
+public Balance(String n,double b)
+{
+name=n;
+balance=b;
+}
+public void display()
+{
+System.out.println("name:"+name);
+System.out.println("Balance:"+balance);
+}
+}
+
+Main Programm:
+
+import packages.balance
+public class pr9q1
+{
+public static void main(String[]args)
+{
+Balance b1=new Balance("abc",10000);
+b1.display();
+}
+}
+
+
+Q2) Create a package Animals. In package Animals create interface Animal with suitable behaviors (move, eat). Define two classes Dog and Cat that implement Animals interface. Now import this package in your class
+
+Package create:
+1)package Animals;
+interface animal
+{
+void move();
+void eat();
+}
+public class dog implements animals
+{
+public void move()
+{
+System.out.println("cat is moving");
+}
+public void eat()
+System.out.println("dog is eating");
+}
+}
+
+2)package Animals;
+interface animal
+{
+void move();
+void eat();
+}
+public class cat implements animal
+{
+public void move()
+{
+System.out.println("cat is moving");
+public void eat()
+{
+System.out.println("cat is eating");
+}
+}
+
+Main Program:
+import Animals.*;
+public class animals demo
+{
+public static void main(String[]args)
+{
+cat c1=new cat();
+dog d1=new dog();
+c1.move();
+c1.eat();
+d1.move();
+d1.eat();
+}
+}
+
+
+
+
+
+Q3) Define a package "Diagram" which contain the following:
+
+Define an interface Shape containing function area. Define two classes Triangle and Rectangle that implement Shape interface with proper code for calculation of area. Also define a class to test the above and call the funtion area using variable of Shape.
+
+Package Create:
+
+1) package shape;
+interface shapes
+{
+void area();
+}
+public class tri implements shapes
+{
+int l,b;
+public tri(int l,int b)
+{
+this.l=l;
+this.b=l;
+}
+public void area()
+{
+System.out.println("area of triangle = " +0.5*(l*b));
+}
+}
+
+2)package shape;
+interface shapes
+{
+void area();
+}
+public class rec implements shapes
+{
+int l,b;
+public rec(intl,intb)
+{
+this.l=l;
+this.b=b;
+}
+public void area()
+{
+System.out.println("area of rectangle:" +(l*b));
+}
+}
+
+Main Program:
+
+import  shape.*;
+public class shapedemo
+{
+public static void main(String[]args)
+{
+tri t1=new tri(20,30);
+rec r1=new rec(10,50);
+t1.area();
+r1.area();
+}
+}
+

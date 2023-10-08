@@ -1,0 +1,53 @@
+
+			-----------------------PRACTICAL 11 [ SWING ] ----------------------
+
+Q1) Design a java application using swing controls to convert temperature from celcius to fahrenhert.
+
+private void btn_conActionPerformed(java.awt.event.ActionEvent evt) {                                        
+         double c=Double.parseDouble(txt_cel.getText());
+         double f=c*1.8+32;
+         txt_fah.setText(f+" farehnhiet");
+    }                          
+
+Q2) Write a java program to design a calculator using swing controls.
+
+private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {                                        
+          
+            int n1=Integer.parseInt(txt_num1.getText());
+            int n2=Integer.parseInt(txt_num2.getText());
+            int n3=n1+n2;
+            txt_rst.setText("Addition : "+n3);
+    }                                       
+
+    private void btn_subActionPerformed(java.awt.event.ActionEvent evt) {                                        
+            int n1=Integer.parseInt(txt_num1.getText());
+            int n2=Integer.parseInt(txt_num2.getText());
+            int n3=n1-n2;
+            txt_rst.setText("Subtraction : "+n3); 
+    }                                       
+
+    private void btn_mulActionPerformed(java.awt.event.ActionEvent evt) {                                        
+            int n1=Integer.parseInt(txt_num1.getText());
+            int n2=Integer.parseInt(txt_num2.getText());
+            int n3=n1*n2;
+            txt_rst.setText("Multiplication : "+n3);
+    }                                       
+
+    private void btn_divActionPerformed(java.awt.event.ActionEvent evt) {                                        
+            int n1=Integer.parseInt(txt_num1.getText());
+            int n2=Integer.parseInt(txt_num2.getText());
+            int n3=n1/n2;
+            txt_rst.setText("Division : "+n3);
+    }                                       
+
+Q3) Accept Principal amount,rate of Integer on of years user, it should contain calculate simple interest button which return. Simple Interest also find amount button which will find amount by adding amount and interest.
+
+private void btn_calActionPerformed(java.awt.event.ActionEvent evt) {                                        
+            double A=Double.parseDouble(txt_amt.getText());
+            int R=Integer.parseInt(txt_roi.getText());
+            int Y=Integer.parseInt(txt_yr.getText());
+            double s=(A*R*Y)/100;
+            double f=A+s;
+            txt_si.setText("Simple Interest :"+ s);
+            txt_fa.setText("Final Amount :"+f);
+    }                                       
